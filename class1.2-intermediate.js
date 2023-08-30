@@ -119,14 +119,57 @@ function login() {
 //4.1 Map = object that holds key-value pairs of any data type
 const store = new Map([
     ["t-shirt", 20],
-    ["jeans",30],
-    ["socket",20]
+    ["jeans", 30],
+    ["socket", 20]
 ]);
-store.set("hat",20)
+store.get("socket");
+store.set("hat", 20);
 store.delete("hat");
 store.has("hat");//false
 store.size;//length 3
 let shoppingCart = 0;
 store.forEach((value, key) => console.log(`${key} $${value}`));
-
+//4.2 object = A group of properties and methods properties
+//= what an object has methods = what an object can do use to access.
+const car = {
+    mode: "Mustang",
+    color: "red",
+    year: 2023,
+    dive: function () {
+        console.log("You can drive your car!");
+    },
+    brake: function () {
+        console.log("You step on brake!");
+    }
+}
+console.log(car.mode);
+car.dive();
+//4.3 this = reference to a particular object
+//the object depends on the immediate context
+const car2 = {
+    mode: "hh",
+    color: "yellow",
+    year: 2023,
+    dive: function () {
+        console.log(`You can drive ${this.mode}!`);
+    },
+    brake: function () {
+        console.log("You step on brake!");
+    }
+}
+//4.4 class =  a blueprint for creating objects define
+//what properties and methods they have use a constructor
+//for unique properties
+class Player{
+    score = 0;
+    pause(){
+        console.log("you paused the game");
+    }
+    exit(){
+        console.log("you exited the game");
+    }
+}
+const player1 = new Player();
+player1.score += 1;
+console.log(player1.score);
 
