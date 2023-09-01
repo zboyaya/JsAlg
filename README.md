@@ -19,5 +19,5 @@ Run node file.js to run code in terminal
 - 4 Implement the solution and test it using example inputs. Fix bugs if any. Then test again, fix again.
 - 5 Analyze the algorithm's complexity and identify inefficiencies if any.
 - 6 Apply the right technique to overcome the inefficiency. Repeat the steps of 3 to 6.
-
-3. 
+ 3. Resources
+- [DesginAPIinterview](https://www.google.com/search?q=design+api+coding+questions&oq=d&aqs=chrome.1.69i60j69i59l3j0i67i650j69i60l3.9411j0j7&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:73e2cfc4,vid:FjW5uFA5QdA)
