@@ -1,8 +1,10 @@
 # The algorithm  about Js
 
 ## Courses
-1. JavaScript tutorial for beginners: learn js in 1 hour- 2018
-2. JavaScript Algorithms Codevolution -2022
+1. JavaScript Full Course for free 🌐 (2023)-with html and js interaction \
+<https://www.youtube.com/watch?v=8dWL3wF_OMw>
+2. JavaScript Algorithms \
+https://www.youtube.com/playlist?list=PLC3y8-rFHvwiRYB4-HHKHblh3_bQNJTMa
 
 ## OverView
 
