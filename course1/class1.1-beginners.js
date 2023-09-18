@@ -1,9 +1,21 @@
 //Math Function
-Math.floor(2.5);
-Math.pow(2);
-Math.sqrt(2)
+Math.round(4.4)//4 rounded to nearest integer
+Math.ceil(4.4)// 4 rounded up to its nearest integer
+Math.floor(4.5);//5 rounded down to its nearest integer
+
+Math.sign(-4);//return x is negative, null or positive(-1, 0, 1)
+
+Math.pow(x,y);//return the value of x to the power of y(8^2) (64,1/2) (3, -2)--->1/3^2
+Math.sqrt(64);// return the square root of x
+
+Math.abs(-4.7)//4.7
+
 let numbers = [1,2,3]
 Math.max(...numbers);
+Math.min(...numbers);
+
+Math.random(); //return between 0 - 1 (Math.random()*10 + 1)    1-10
+
 //String Funtion
 let str = "myName"
 str.trim();
