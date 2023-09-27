@@ -75,7 +75,7 @@ parseInt(string, radix);//radix could be (2-36) generally is 10
  * Check if a value is a node list
  *
  * @param {*} val
- * @returns {Boolean}
+ * @return {Boolean}
  */
 //understand the comments: provide description about parameters accepted and return value by function
 //{} means data type; val is params name in function; 
@@ -137,6 +137,8 @@ console.log(myNum);
 
 //Array -obj 5
 // let fruits = ["apple","orange"]
+let ans = new Array(s.length).fill("");
+
 fruits.push('lemon');
 fruits.unshift('lemon');//add beginning
 fruits.pop();
@@ -144,6 +146,12 @@ fruits.shift();//remove from beginning
 
 let l = fruits.length;
 let i1 = fruits.indexOf('apple');
+
+fruits.join('');//let it becomes a string without commas
+let result = "";//do the same thing
+for(let i=0; i<arr.length; i++) {
+    result = result + arr[i];
+}
 
 for(let i = 0; i < fruits.length; i++){
     console.log(fruits[i]);
@@ -154,6 +162,7 @@ for(let fruit of fruits){
 
 fruits = fruits.sort().reverse();
 console.log(...fruits);
+[...str].reverse().join("");//reverse a string
 
 //spread operator = allow an iterable(array or string to be expanded in places where 0 or more arguments expected)
 Math.max(...fruits);
