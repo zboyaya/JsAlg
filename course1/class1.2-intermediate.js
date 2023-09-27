@@ -19,7 +19,7 @@ function display(output) {
 }
 
 sum(2, 3, display);
-//2.1 array.forEach() call function
+//2.1 array.forEach() call function-5
 let students = ['apple', 'b', 'c'];
 students.forEach(capitalize);
 function capitalize(element, index, array) {
