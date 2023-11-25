@@ -28,6 +28,10 @@ finally {
 
 //5.3 setTimeout() = invokes a function after a number of milliseconds
 // asynchronous function(doesn't pause execution program)
+
+/* Code executed by setTimeout() is called from 
+an *execution context* separate from the function from which setTimeout was called. */
+// https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
 function firstMessage() {
     console.log("Buy this for $500!!!");
 }
@@ -77,6 +81,7 @@ let year = date.getFullYear();//2023
 let dayOfMonth = date.getDate();//which day in this month
 let dayOfWeek = date.getDay();//which day in this week (Monday-1.Sunday-0)
 let month = date.getMonth();//9-means Aug(Jan-0)
+
 let hour = date.getHours();//0-23
 let minutes = date.getMinutes();
 let seconds = date.getSeconds();
