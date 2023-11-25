@@ -74,6 +74,13 @@ function print(a) {
 }
 grades.forEach(print);
 console.log(grades);
+//2.6 array.every() -  returns true if all elements in an array pass a test (provided as a function).
+const agess = [32, 33, 16, 40];
+agess.every(checkAge);//false
+function checkAge(age) {
+  return age > 18;
+}
+
 //3.1 function expression = function without name (anonymous function) 
 //avoid polluting the global scope with names write it, then forget it
 const greeting = function () {
@@ -116,12 +123,13 @@ function login() {
     function displayUserName() { console.log("Lily"); }
     function displayUserInbox() { console.log("123"); }
 }
-//4.1 Map = object that holds key-value pairs of any data type
+//4.1 Map = object that holds key-value pairs of any data type/special objects
 const store = new Map([
     ["t-shirt", 20],
     ["jeans", 30],
     ["socket", 20]
-]);
+]);//round bracket
+let map2 = new Map();
 store.get("socket");
 store.set("hat", 20);
 store.delete("hat");
@@ -129,7 +137,41 @@ store.has("hat");//false
 store.size;//length 3
 let shoppingCart = 0;
 store.forEach((value, key) => console.log(`${key} $${value}`));
-//4.2 object = A group of properties and methods properties
+// List all entries// you can't use "in" in any loop
+let text2 = "";
+for (const x of fruits.entries()) {
+  text2 += x;
+}//apples,500    bananas,300   oranges,200
+// List all keys
+let text3 = "";
+for (const x of fruits.keys()) {
+  text += x;
+}
+// List all values
+let text4 = "";
+for (const x of fruits.values()) {
+  text += x;
+}
+
+//4.1.2 Set = a collection of unique values.Each value can only occur once in a Set.
+// Create a Set
+const letters = new Set(["a","b","c"]);
+// Create a Set
+const letters2 = new Set();
+// Add Values to the Set
+letters.add("a");//If you add equal elements, only the first will be saved
+letters.delete("b");
+letters.has("c");
+letters.values()   // Returns [object Set Iterator]
+letters.keys()   // Returns [object Set Iterator] same as values/makes Sets compatible with Maps
+// List all Values
+let text = "";
+for (const entry of myIterator) {
+  text += entry;
+}
+
+
+//4.2 object = A group of properties and methods properties !!! Array is a special object
 //= what an object has methods = what an object can do use to access.
 const car = {
     mode: "Mustang",
@@ -157,6 +199,31 @@ const car2 = {
         console.log("You step on brake!");
     }
 }
+//4.3.1 -how to display a object?
+const person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+};
+let txt = "";
+//how to add and delete New Properties?
+person.nationality = "English";
+delete person.age;
+//how to visit each value?
+for (let x in person) {//notice it's "in"
+    txt += person[x] + " ";//there is no one return undefined & you cant use obj.key to get value here
+};
+const myArray = Object.values(person);//return js array of values:John,30,New York
+
+const keys = Object.keys(person);
+const entries = Object.entries(person);
+//how to visit each key(index)?
+for(let i in obj){
+    console.log(i);
+}
+//get string of it.
+let myString = JSON.stringify(person);//{"name":"John","age":50,"city":"New York"} string
+
 //4.4 class =  a blueprint for creating objects define
 //what properties and methods they have use a constructor
 //for unique properties
