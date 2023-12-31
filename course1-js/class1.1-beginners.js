@@ -15,7 +15,12 @@ let numbers = [1, 2, 3]
 Math.max(...numbers);
 Math.min(...numbers);
 
-Math.random(); //return between 0 - 1 (Math.random()*10 + 1)    1-10
+Number.MAX_VALUE;
+Number.MIN_VALUE;
+Infinity
+-Infinity
+
+Math.random(); //return between 0 - 1 Math.floor((Math.random()*10 + 1))  1-10
 let number = Infinity;//infinity is max number in js
 
 //String Function 9
@@ -48,6 +53,8 @@ str.padStart(7, "0");//0myName
 str.padEnd(7, "0");//myName0 pad a string with "0" until reaches the length 7
 
 str.charAt(0);//returns an empty string- no character
+str.charCodeAt(0); //return Unicode of the character at a specified index
+"a".charCodeAt(0);//usually used to minus it
 str[0];//undefined if no - property access [] on string
 str.indexOf('m');//return -1 not found & case sensitive
 str.indexOf('happy');
@@ -163,6 +170,7 @@ console.log(myNum);
 
 //Array -it's a particular object  6
 // let fruits = ["apple","orange"]
+//change original one
 let ans = new Array(s.length).fill("");
 
 fruits.push('lemon');
@@ -170,17 +178,26 @@ fruits.unshift('lemon');//add beginning
 fruits.pop();
 fruits.shift();//remove from beginning
 
-let l = fruits.length;
-let i1 = fruits.indexOf('apple');
-
 fruits.splice(2, 2);//At position 2, remove 2 items (index, how-many, addItems)
 fruits.splice(2, 0, "Lemon", "Kiwi");//At position 2, add 2 elements
+fruits.sort();
+fruits.reverse();
+//---------------------------------------------------------------------------------
+//make a new array/element
+let l = fruits.length;
+let i1 = fruits.indexOf('apple');
+fruits.slice(start, end);//[)
 
 fruits.join('');//let it becomes a string without commas
 let result = "";//do the same thing
 for (let i = 0; i < arr.length; i++) {
     result = result + arr[i];
 }
+
+let firstName = 'hello, my name is bolaji, I am a dev.';
+firstName.split(',', 2); // ["hello", " my name is bolaji"]
+firstName = 'Bolaji';
+firstName.split('') // ["B", "o", "l", "a", "j", "i"]
 
 
 //merge method:

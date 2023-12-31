@@ -32,6 +32,7 @@ function print(element) {
 }
 students.forEach(print);
 //2.2 array.map() = execute a provided callback function once for each array element AND creates a new array
+//difference with forEach, allow to return a value
 let numbers = [1, 2, 3, 4];
 let squares = numbers.map(square);
 function square(element) {
@@ -62,7 +63,7 @@ console.log(`the total is: $${total}`);
 //If the result is negative, a is sorted before b.
 //If the result is positive, b is sorted before a.
 let grades = [100, 50, 90, 60, 80, 70]
-function accedingSort(a, b) {
+function ascendingSort(a, b) {
     return a - b;//small to large
 }
 function descendingSort(a, b) {
